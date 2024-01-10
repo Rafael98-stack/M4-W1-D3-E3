@@ -1,13 +1,24 @@
+import Funzionalita.Chiamata;
 import Funzionalita.SIM;
-
-import java.util.Arrays;
 
 public class EsercizioDue {
     public static void main(String[] args) {
+int numeroChiamate = 5;
+        SIM Gianni = new SIM(324568435);
 
-        SIM Gianni = new SIM(324568435,0, new int[]{321312312,1111,2222});
-        System.out.println("La tua SIM: "+Arrays.toString(Gianni.getChiamate()));
-        System.out.println("Il tuo Numero: "+Gianni.getNumero());
-        System.out.println("Il tuo Credito: "+ Gianni.getCredito());
+
+        Chiamata[] ListaChiamate = new Chiamata[numeroChiamate];
+        ListaChiamate[0] = new Chiamata(432423424, 10);
+        ListaChiamate[1] = new Chiamata(645674545, 11);
+        ListaChiamate[2] = new Chiamata(231312312, 8);
+        ListaChiamate[3] = new Chiamata(876867867, 20);
+        ListaChiamate[4] = new Chiamata(534243243, 3);
+
+        Chiamata[]arr = new Chiamata[1];
+        arr[0]= new Chiamata(321312321,1);
+
+        Gianni.setListaChiamate(ListaChiamate);
+        Gianni.aggiungiCredito(10.10);
+        Gianni.Dati();
     }
 }
